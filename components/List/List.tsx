@@ -1,7 +1,7 @@
-import { useQuery } from 'react-query'
-import Link from 'next/link'
+import { useQuery } from "react-query";
+import Link from "next/link";
 
-import { getGists, Gist } from '../../services'
+import { getGists, Gist } from "../../services";
 
 const ListItems = (items: Gist[]) =>
   items.map((gist) => {
@@ -13,11 +13,11 @@ const ListItems = (items: Gist[]) =>
           </a>
         </Link>
       </li>
-    )
-  })
+    );
+  });
 
 export const List = () => {
-  const { data: gists, isLoading, isSuccess } = useQuery(['gists'], getGists)
+  const { data: gists, isLoading, isSuccess } = useQuery(["gists"], getGists);
 
   return (
     <>
@@ -26,5 +26,5 @@ export const List = () => {
         <ul className="list-disc space-y-4 px-4">{ListItems(gists)}</ul>
       )}
     </>
-  )
-}
+  );
+};
