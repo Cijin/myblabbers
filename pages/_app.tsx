@@ -10,10 +10,12 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydratedState}>
-        <div className="bg-slate-900 h-screen">
-          <section className="flex item-center justify-center">
-            <Component {...pageProps} />
-          </section>
+        <div className="bg-zinc-900 min-h-screen text-white">
+          <div className="container mx-auto py-20">
+            <section className="flex item-center justify-center">
+              <Component {...pageProps} />
+            </section>
+          </div>
         </div>
       </Hydrate>
     </QueryClientProvider>
