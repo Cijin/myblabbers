@@ -1,9 +1,11 @@
 import axios from 'axios'
 
+import { Gist } from './models'
+
 const GithubApiURL = 'https://api.github.com'
 const username = 'cijin'
 
-export const getGists = async () => {
+export const getGists = async (): Promise<Gist[]> => {
   const { data } = await axios({
     method: 'get',
     url: `${GithubApiURL}/users/${username}/gists`,
@@ -12,7 +14,7 @@ export const getGists = async () => {
   return data
 }
 
-export const getGist = async (id: string) => {
+export const getGist = async (id: string): Promise<Gist> => {
   const { data } = await axios({
     method: 'get',
     url: `${GithubApiURL}/gists/${id}`,

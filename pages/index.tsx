@@ -16,10 +16,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <H1>
-          Welcome to <span className="text-green-500">devblabber!</span>
-        </H1>
+      <main className="space-y-8">
+        <H1 className="text-green-500">Gists</H1>
         <List />
       </main>
     </div>
