@@ -2,6 +2,9 @@ import * as React from 'react'
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query'
 import type { AppProps } from 'next/app'
 
+// components
+import { Footer } from '../components'
+
 import '../styles/globals.css'
 
 function App({ Component, pageProps }: AppProps) {
@@ -10,11 +13,16 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydratedState}>
-        <div className="bg-zinc-900 min-h-screen text-white">
-          <div className="container mx-auto py-20">
-            <section className="flex item-center justify-center">
-              <Component {...pageProps} />
-            </section>
+        {/* Main Content */}
+        <div className="bg-zinc-900 text-white">
+          <div className="container mx-auto py-12 flex flex-col min-h-screen">
+            <main>
+              <section>
+                <Component {...pageProps} />
+              </section>
+            </main>
+
+            <Footer />
           </div>
         </div>
       </Hydrate>
