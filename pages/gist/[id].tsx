@@ -37,7 +37,7 @@ const Gist = ({ id }: GistProps) => {
     }
 
     return (
-      <div className="text-white space-y-8">
+      <div className="space-y-8">
         <Link href="/">
           <a className="underline underline-offset-4 hover:text-green-500">
             Home
