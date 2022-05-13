@@ -82,7 +82,7 @@ const Gist = ({ id }: GistProps) => {
     <>
       {isLoading && <h1>Loading . . .</h1>}
       {isSuccess && (
-        <code>
+        <code className="mb-2">
           <GistInfo />
         </code>
       )}
