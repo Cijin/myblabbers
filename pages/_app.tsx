@@ -2,8 +2,7 @@ import * as React from 'react'
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query'
 import type { AppProps } from 'next/app'
 
-// components
-import { Footer } from '../components'
+import { Footer, Header } from '../components'
 
 import '../styles/globals.css'
 
@@ -15,7 +14,9 @@ function App({ Component, pageProps }: AppProps) {
       <Hydrate state={pageProps.dehydratedState}>
         {/* Main Content */}
         <div className="bg-zinc-900 text-white">
-          <div className="container mx-auto py-12 flex flex-col min-h-screen">
+          <div className="container mx-auto flex flex-col min-h-screen">
+            <Header />
+
             <main>
               <section>
                 <Component {...pageProps} />
