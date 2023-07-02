@@ -1,5 +1,4 @@
 import type { NextPageContext } from 'next'
-import Link from 'next/link'
 import { useQuery } from 'react-query'
 import ReactMarkdown from 'react-markdown'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
