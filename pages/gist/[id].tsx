@@ -45,6 +45,7 @@ const Gist = ({ id }: GistProps) => {
         </header>
         <section className="space-y-4">
           <ReactMarkdown
+            className="markdown"
             components={{
               code({ node, inline, className, children, ...props }) {
                 const match = /language-(\w+)/.exec(className || '')
