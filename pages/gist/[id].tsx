@@ -43,7 +43,7 @@ const Gist = ({ id }: GistProps) => {
             Updated: {getLocaleDate(gist.updated_at)}
           </Caption>
         </header>
-        <section className="space-y-4">
+        <section className="space-y-4 md">
           <ReactMarkdown
             className="markdown"
             components={{
