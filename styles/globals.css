@@ -8,10 +8,4 @@
   html {
     font-family: Nunito, system-ui, sans-serif;
   }
-
-  .md a {
-    color: rgb(134 239 172);
-    text-decoration-line: underline;
-    text-underline-offset: 4px;
-  }
 }

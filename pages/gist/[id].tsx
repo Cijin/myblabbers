@@ -43,9 +43,21 @@ const Gist = ({ id }: GistProps) => {
             Updated: {getLocaleDate(gist.updated_at)}
           </Caption>
         </header>
-        <section className="space-y-4 md">
+        <section className="space-y-4">
           <ReactMarkdown
             components={{
+              a: ({ node, ...props }) => (
+                <a
+                  className="text-lg text-green-300 underline underline-offset-4"
+                  {...props}
+                />
+              ),
+              h2: ({ node, ...props }) => (
+                <h2
+                  className="text-header-3 lg:text-2xl font-bold text-white"
+                  {...props}
+                />
+              ),
               code({ node, inline, className, children, ...props }) {
                 const match = /language-(\w+)/.exec(className || '')
                 return !inline && match ? (
